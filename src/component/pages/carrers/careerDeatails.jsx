@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useFetch from '../../useFetch/useFetch';
 
 const CareerDetails = () => {
@@ -12,7 +12,10 @@ const CareerDetails = () => {
    
     return ( 
         <div>
-        {error && <h1>{error}</h1>}
+        {error && <h1>{error} <br />
+        <Link to='/'> Go to homepage</Link>
+        </h1>
+        }
         {ispending && <h1>data loading...</h1>}
   
         <article style={{ maxWidth: '1000px', margin: '0 auto' }}>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+
 const useFetch = url => {
   const [data, setdata] = useState(null);
   const [ispending, setispending] = useState(true);
@@ -11,6 +12,7 @@ const useFetch = url => {
       .then(res => {
         if (!res.ok) {
           throw Error('could not fetch the data for that resource');
+
         }
         return res.json();
       })

@@ -17,6 +17,7 @@ import NotFoundPage from "./component/pages/notFoundPage";
 import Carrers from "./component/pages/carrers/carriers";
 import CarrersLayout from "./layouts/carrersLayout";
 import CareerDetails from "./component/pages/carrers/careerDeatails";
+import CarrierError from "./component/pages/carrers/carrierError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +34,10 @@ const router = createBrowserRouter(
 
       <Route path="carrers" element={<CarrersLayout />}>
         <Route index element={<Carrers />} />
-        <Route path=":id" element={<CareerDetails/>}/> 
+        <Route path=":id"
+         element={<CareerDetails/>}
+         errorElement={<CarrierError/>}
+         /> 
     
       </Route>
 

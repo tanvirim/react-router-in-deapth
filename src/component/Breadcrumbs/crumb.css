@@ -1,0 +1,27 @@
+.crumb-container {
+    margin-left: 100px;
+}
+
+.crumb {
+    display: inline-block;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #333;
+}
+
+.crumb:after {
+    content: '>';
+    margin-left: 10px;
+
+}
+
+.crumb:last-child {
+    font-weight: bold;
+    color: #000;
+}
+
+.crumb a {
+    text-decoration: none;
+    color: black;
+}
