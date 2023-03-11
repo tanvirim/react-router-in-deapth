@@ -4,15 +4,16 @@ import './crumb.css';
 const Breadcrumbs = () => {
   let currentLink = '';
   const location = useLocation();
-  let crumb = location.pathname
+
+  const crumb = location.pathname
     .split('/')
     .filter(pathnames => pathnames !== '')
-    .map(crumb => {
-      currentLink += `/${crumb}`;
+    .map(currCrumb => {
+      currentLink += `/${currCrumb}`;
 
       return (
-        <div className='crumb' key={crumb}>
-          <Link to={currentLink}> {crumb} </Link>
+        <div className='crumb' key={currCrumb}>
+          <Link to={currentLink}> {currCrumb} </Link>
         </div>
       );
     });
